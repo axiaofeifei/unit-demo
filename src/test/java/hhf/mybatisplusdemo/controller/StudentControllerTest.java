@@ -46,6 +46,8 @@ class StudentControllerTest extends BaseTest {
 	//有参方法测试
 	@Test
 	public void getOne() throws Exception{
+		init();
+
 		MvcResult mvcResult = mockMvc.perform(MockMvcRequestBuilders.get("/student/getOne")
 				.accept(MediaType.APPLICATION_JSON).param("id", "3"))
 				.andExpect(MockMvcResultMatchers.status().isOk())
@@ -54,6 +56,8 @@ class StudentControllerTest extends BaseTest {
 
 
 		logger.info(mvcResult.getResponse().getContentAsString());
+
+		after();
 
 	}
 

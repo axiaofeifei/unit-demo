@@ -46,6 +46,9 @@ class HelloControllerTest extends BaseTest {
 	//无参构造方法
 	@Test
 	public void hello() throws Exception {
+
+			init();
+
 			MvcResult mvcResult = mockMvc
 					.perform(MockMvcRequestBuilders
 					.get("/hello/mybatis/"))
@@ -54,6 +57,8 @@ class HelloControllerTest extends BaseTest {
 					.andReturn();
 
 			logger.info(mvcResult.getResponse().getContentAsString());
+
+			after();
 
 	}
 

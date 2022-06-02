@@ -26,11 +26,11 @@ public class BaseTest {
 
 	@Before
 	public void init() {
-		logger.info("开始测试...");
+		logger.info("开始测试...................");
 	}
 
 	@After
 	public void after() {
-		logger.info("测试结束...");
+		logger.info("测试结束...................");
 	}
 }
